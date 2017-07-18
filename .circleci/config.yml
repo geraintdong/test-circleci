@@ -11,10 +11,10 @@ machine:
     version: 2.3.4
 deployment:
   staging:
-    branch: staging
+    branch: develop
     commands:
       - bundle exec cap staging deploy
   production:
-    branch: production
+    branch: master
     commands:
       - bundle exec cap production deploy
