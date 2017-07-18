@@ -1,8 +1,21 @@
-version: 2
-jobs:
-   build:
-     docker:
-       - image: circleci/php:7.0
-     steps:
-       - checkout
-       - run: echo "hello world"
+# version: 2
+# jobs:
+#    build:
+#      docker:
+#        - image: circleci/php:7.0
+#      steps:
+#        - checkout
+#        - run: echo "hello world"
+
+machine:
+  ruby:
+    version: 2.3.4
+deployment:
+  staging:
+    branch: staging
+    commands:
+      - bundle exec cap staging deploy
+  production:
+    branch: production
+    commands:
+      - bundle exec cap production deploy
