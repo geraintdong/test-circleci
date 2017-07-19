@@ -1,3 +1,2 @@
 <?php 
-echo '123456';
-echo 'landong123';
+echo '19-Jul-2017 01:20 PM';
